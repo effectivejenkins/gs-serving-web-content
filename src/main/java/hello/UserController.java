@@ -11,7 +11,7 @@ public class UserController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/user/new")
-    public User whois(@RequestParam(value="name", required=false, defaultValue="John") String name) {
+    public User AddNewUser(@RequestParam(value="name", required=false, defaultValue="John") String name) {
         return new User(counter.incrementAndGet(), name);
     }
 }
